@@ -1,4 +1,4 @@
-### css-frameworks-ca
+### Jenny_Feragen-css-frameworks-ca
 
 # Goal
 To apply knowledge of Bootstrap and SASS to build a responsive front end for a social media application.
