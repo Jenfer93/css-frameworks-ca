@@ -21,19 +21,19 @@ You will only be working on the visuals for this project at this stage, forms do
 Submission for this project will follow the pattern used in professional development. You are required to seek feedback from your peers as well as the teachers in order to complete this assignment.
 
 # Process
-Create a design or wireframe for each page
-Create a new public repository on GitHub
-Create a new project folder for this repository
-Create a new git branch for this project
-Create a package.json file
-Install Bootstrap, SASS and Live Server
-Configure NPM scripts in package.json
-Implement your design using Bootstrap and SASS overrides
-Create a Pull Request to merge your changes to the main branch
-Share this Pull Request and request peer review
-Discuss and implement the feedback gathered from peer review
-Share this Pull Request with a teacher for their approval
-Complete the approved Pull Request, or implement the required changes
+- Create a design or wireframe for each page
+- Create a new public repository on GitHub
+- Create a new project folder for this repository
+- Create a new git branch for this project
+- Create a package.json file
+- Install Bootstrap, SASS and Live Server
+- Configure NPM scripts in package.json
+- Implement your design using Bootstrap and SASS overrides
+- Create a Pull Request to merge your changes to the main branch
+- Share this Pull Request and request peer review
+- Discuss and implement the feedback gathered from peer review
+- Share this Pull Request with a teacher for their approval
+- Complete the approved Pull Request, or implement the required changes
 
 # Delivery
 For peer review, please submit a link to your repository to the Moodle forum. You should review 2 of your peers’ submissions.
@@ -46,6 +46,9 @@ Please make sure to exclude node_modules by using a .gitignore file.
 
 # Resources
 Using branches and making a pull request
+
 Installing Bootstrap
+
 Customising Bootstrap
+
 Excluding node_modules using .gitignore
