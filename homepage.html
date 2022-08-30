@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doggos</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/profile.html" class="nav-link px-2 link-secondary">Profile</a></li>
+          <li><a href="#" class="nav-link px-2 link-dark">Contacts</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="/css-frameworks-ca-ressurses/profile-picture-pug.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="/profile.html">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/index.html">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class=".bg-secondary.bg-gradient bg-opacity-25">
+    
+      <h1 class="text-center .fs-3">Less people, more dogs!</h1>
+      <div class="d-flex justify-content-around">
+        <div class="p-2 flex-grow-1 justify-content-center">
+          <div class="m-auto w-75">
+            <label for="exampleFormControlTextarea1" class="form-label">Tell us what's on your mind</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button type="submit" class="btn btn-primary m-2">Post mind</button>
+          </div>
+
+        <!--Cards of posts-->
+          <div class="card text-bg-info mb-3 m-auto" style="max-width: 18rem;">
+            <div class="card-header d-inline-flex p-2 justify-content-between">
+              <p>Collie</p>
+              <a href="#">
+                <img src="/css-frameworks-ca-ressurses/profile-picture-bordercollie.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card text-bg-info mb-3 m-auto" style="max-width: 18rem;">
+            <div class="card-header d-inline-flex p-2 justify-content-between">
+              <p>Chowchow</p>
+              <a href="#">
+                <img src="/css-frameworks-ca-ressurses/profile-picture-chowchow.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card text-bg-info mb-3 m-auto" style="max-width: 18rem;">
+            <div class="card-header d-inline-flex p-2 justify-content-between">
+              <p>Schnauzer</p>
+              <a href="#">
+                <img src="/css-frameworks-ca-ressurses/profile-picture-schnauzer.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card text-bg-info mb-3 m-auto" style="max-width: 18rem;">
+            <div class="card-header d-inline-flex p-2 justify-content-between">
+              <p>Toller</p>
+              <a href="#">
+                <img src="/css-frameworks-ca-ressurses/profile-picture-toller.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
+              </a>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <!--Contactlist-->
+        <div class="list-group w-auto p-3">
+          <h3>Contacts</h3>
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <img src="/css-frameworks-ca-ressurses/profile-picture-chowchow.jpg" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Chowchow</h6>
+                <p class="mb-0 opacity-75">Last active</p>
+              </div>
+              <small class="opacity-50 text-nowrap">now</small>
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <img src="/css-frameworks-ca-ressurses/profile-picture-bordercollie.jpg" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Border Collie</h6>
+                <p class="mb-0 opacity-75">Last active</p>
+              </div>
+              <small class="opacity-50 text-nowrap">1h</small>
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <img src="/css-frameworks-ca-ressurses/profile-picture-schnauzer.jpg" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Schnauzer</h6>
+                <p class="mb-0 opacity-75">last active</p>
+              </div>
+              <small class="opacity-50 text-nowrap">3h</small>
+            </div>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            <img src="/css-frameworks-ca-ressurses/profile-picture-toller.jpg" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+              <div>
+                <h6 class="mb-0">Toller</h6>
+                <p class="mb-0 opacity-75">last active</p>
+              </div>
+              <small class="opacity-50 text-nowrap">1d</small>
+            </div>
+          </a>
+        </div>
+      </div>
+  </main>
+  <div class="container">
+    <footer class="d-flex py-3 my-4 border-top">
+      <div>
+        <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+      </div>
+    </footer>
+  </div>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
