@@ -10767,8 +10767,13 @@ header {
 }
 
 .form-control {
-  max-width: 600px;
+  max-width: 25rem;
   background-color: #fff;
+}
+
+.card {
+  max-width: 25rem;
+  min-width: 18rem;
 }
 
 .profile-picture {
