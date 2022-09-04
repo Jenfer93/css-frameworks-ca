@@ -10758,6 +10758,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+:root {
+  --card-width: 25rem;
+}
+
 main {
   max-width: 900px;
 }
@@ -10767,8 +10771,13 @@ header {
 }
 
 .form-control {
-  max-width: 600px;
+  max-width: var(--card-width);
   background-color: #fff;
+}
+
+.card {
+  max-width: var(--card-width);
+  min-width: 18rem;
 }
 
 .profile-picture {
