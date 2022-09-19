@@ -1,54 +1,47 @@
-### Jenny_Feragen-css-frameworks-ca
+### Jenny_Feragen-JS2-ca
 
-# Goal
-To apply knowledge of Bootstrap and SASS to build a responsive front end for a social media application.
+Link to Trello:
+https://trello.com/invite/b/paTJD0lP/3d2cbf024ef710eb6fdc2e3468eb0393/js2-ca
 
-# Brief
-You are tasked with creating 3 pages in HTML using Bootstrap and SASS:
+## Goal
 
-* Homepage
-* Profile page
-* Login page
+To apply knowledge of JavaScript techniques to implement the front end functionality for a social media application.
 
-The Homepage should have a feed of posts from the user’s contacts, a search bar, and a form to create a new post.
+## API
 
-The profile page should have a profile image, details about the user, a list of the user’s contacts, their posts and a form to post to their wall.
+The API you are using for this project can be found under Social EndPoints at the Noroff API documentation.
 
-The login page should have a form to login to the application. Make sure to include HTML form validation and use /profile as the action attribute.
+## Brief
 
-You will only be working on the visuals for this project at this stage, forms do not need to submit data, for example.
+You have been tasked with producing a new JavaScript front end client for an existing social media platform. The client application must be attractive and responsive, but you have an otherwise blank slate in terms of theme design language.
 
-Submission for this project will follow the pattern used in professional development. You are required to seek feedback from your peers as well as the teachers in order to complete this assignment.
+Using the provided API and API documentation, create a functioning user interface that allows for viewing, posting, editing and deleting social media content.
 
-# Process
-- Create a design or wireframe for each page
-- Create a new public repository on GitHub
-- Create a new project folder for this repository
-- Create a new git branch for this project
-- Create a package.json file
-- Install Bootstrap, SASS and Live Server
-- Configure NPM scripts in package.json
-- Implement your design using Bootstrap and SASS overrides
-- Create a Pull Request to merge your changes to the main branch
-- Share this Pull Request and request peer review
-- Discuss and implement the feedback gathered from peer review
-- Share this Pull Request with a teacher for their approval
-- Complete the approved Pull Request, or implement the required changes
+Social API routes require authorization via JWT (JSON Web Tokens). You will need to register an account and login to access your token.
 
-# Delivery
-For peer review, please submit a link to your repository to the Moodle forum. You should review 2 of your peers’ submissions.
+In order to complete the required features you will also need to make use of GET, POST, PUT, and DELETE HTTP methods.
 
-Please submit your public GitHub repository URL along with any supplementary files such as wireframes. Your repo should have an active PR that the teachers will review.
+Using localStorage is highly recommended, especially for storing JWT tokens.
 
-Design files will not be included in your grade but help to provide additional context to the marker.
+A finished project fulfills the requirements below with an easy to use and error-free user interface.
 
-Please make sure to exclude node_modules by using a .gitignore file.
+## Required Features
 
-# Resources
-Using branches and making a pull request
+The following user stories are required for a passing submission:
 
-Installing Bootstrap
+- User with @noroff.no or @stud.noroff.no email can register profile
+- Registered user can login
+- User can view a post content feed
+- User can filter the post content feed
+- User can search the post content feed
+- User can view a post content item by ID
+- User can create a post content item
+- User can update a post content item
+- User can delete a post content item
 
-Customising Bootstrap
+## Restrictions
 
-Excluding node_modules using .gitignore
+Required functionality must be implemented in original, pure JavaScript.
+A CSS Framework may be used to build the application UI.
+A .gitignore file must be provided including node_modules. This folder must be untracked.
+Content posted on the API is public and associated with your identity. Be appropriate and respectful.##
