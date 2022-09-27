@@ -32,7 +32,11 @@ async function loginUser(url, data) {
     const json = await response.json();
     const accessToken = json.accessToken;
     localStorage.setItem('accessToken', accessToken);
+    localStorage.setItem('Users name', response.name);
     console.log(json);
+    if(accessToken){
+    window.location.href = "/homepage.html";
+    } 
     return json;
   } catch(error) {
     console.log(error);

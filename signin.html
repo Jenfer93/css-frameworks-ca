@@ -39,11 +39,11 @@
             <form id="signin-form" action="/index.html" type="post" class="m-auto d-flex justify-content-center align-items-center row">
               <label for="email" class="mt-2">Email address <br>*<small>Obs only @noroff.no or @stud.noroff.no email</small></label>
               <input type="email" name="email" id="email-field" class="login-form-field form-control " placeholder="name@noroff.com" required pattern = "^[\w\-.]+@(stud.)?noroff.no$">
-              <label for="name" class="mt-2">Your name</label>
-              <input type="name" name="name" id="name-field" class="login-form-field form-control " placeholder="Your name" required>
+              <label for="name" class="mt-2">Your name <br>*<small>Format name: Your_Name</small></label>
+              <input type="name" name="name" id="name-field" class="login-form-field form-control " placeholder="Your_name" required>
               <label for="password" class="mt-2">Password <br>*<small>Minimum 5 characters</small></label>
               <input type="password" name="password" id="password-field" class="login-form-field form-control" placeholder="Password" required minlength="5">
-              <input type="submit" value="Login" id="signin-form-submit" class="w-100 mb-2 mt-2 btn btn-lg rounded-3 btn-primary">
+              <input type="submit" value="Sign in" id="signin-form-submit" class="w-100 mb-2 mt-2 btn btn-lg rounded-3 btn-primary">
             </form>
             <p>Already have an account? <a href="index.html">Log in here!</a></p>
           </div>

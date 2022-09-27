@@ -19,8 +19,9 @@ const password = document.getElementById('password-field');
       console.log(user);
     
       registerUser(`${base_url}/api/v1/social/auth/register`, user);
+
     });  
-//POST to the API:
+//POST user Data to the API from the form:
 
     async function registerUser(url, user){
         try {
@@ -36,6 +37,8 @@ const password = document.getElementById('password-field');
           console.log(response);
           const json = await response.json();
           console.log(json);
+          if(response.ok)
+          {window.location.href = "./index.html";};
         } catch (error) {
           console.log(error);
         };
