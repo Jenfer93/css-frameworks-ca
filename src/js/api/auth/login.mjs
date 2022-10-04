@@ -20,4 +20,10 @@ export async function login(profile) {
  
   storage.save("token", accessToken)
   storage.save("profile", user)
+
+  if(!accessToken){
+    alert("Obs, seems like the user is not registered");
+  } else {
+    location.href = "/profile/user/profile.html"
+  }
 }

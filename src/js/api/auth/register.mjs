@@ -15,6 +15,7 @@ export async function register(profile) {
   })
 
   const results = await response.json() 
+  console.log(results) 
+  return results
 
- return results
 }
