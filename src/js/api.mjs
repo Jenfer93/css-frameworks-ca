@@ -1,63 +1,48 @@
 const base_url ='https://nf-api.onrender.com';
 
-//POST to the API:
-async function registerUser(url, data){
-    try {
-      const postData = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      };
+//Form inputs
+const signInForm = document.getElementById('signin-form');
+const email = document.getElementById('email-field');
+const name = document.getElementById('name-field');
+const password = document.getElementById('password-field');
+
+//On submit register user
+
+    signInForm.addEventListener("submit", event => {
+      event.preventDefault();
       
-      const response = await fetch(url, postData);
-      console.log(response);
-      const json = await response.json();
-      console.log(json);
-    } catch (error) {
-      console.log(error);
-    }
-}
-//my user info
-const user = {
-  name: 'jenny_feragen_1', 
-  email: 'JenFer13301@noroff.no',
-  password: 'my-password2',
-};
+      const user = {
+        name: name.value,
+        email: email.value, 
+        password: password.value,
+      };
+      console.log(user);
+    
+      registerUser(`${base_url}/api/v1/social/auth/register`, user);
 
-registerUser(`${base_url}/api/v1/social/auth/register`, user);
+    });  
+//POST user Data to the API from the form:
 
-
-//Log in user
-const userLogin = {
-  email: 'JenFer13301@noroff.no',
-  password: 'my-password2',
-};
-
-async function loginUser(url, data) {
-  try {
-    const postData = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data), 
+    async function registerUser(url, user){
+        try {
+          const postData = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(user),
+          };
+          
+          const response = await fetch(url, postData);
+          console.log(response);
+          const json = await response.json();
+          console.log(json);
+          if(response.ok)
+          {window.location.href = "./index.html";};
+        } catch (error) {
+          console.log(error);
+        };
     };
 
-    const response = await fetch(url, postData);
-    console.log(response);
-    const json = await response.json();
-    const accessToken = json.accessToken;
-    localStorage.setItem('accessToken', accessToken);
-    console.log(json);
-    return json;
-  } catch(error) {
-    console.log(error);
-  }
-}
 
-loginUser(`${base_url}/api/v1/social/auth/login`, user);
-
-export {registerUser, loginUser};
 
