@@ -4,7 +4,9 @@ const action = "/auth/register";
 const method = "post";
 
 export async function register(profile) {
-  const registerURL = API_URL + action; 
+  
+  const registerURL = `${API_URL}${action}`; 
+
 
  const response = await fetch (registerURL, {
     headers: {
@@ -14,8 +16,6 @@ export async function register(profile) {
     body: JSON.stringify(profile) 
   })
 
-  const results = await response.json() 
-  console.log(results) 
+  const results = await response.json()  
   return results
-
-}
+};

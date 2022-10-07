@@ -13,8 +13,6 @@ export async function createPost (postData) {
     
   })
 
-  const post = await response.json();
-  
   return await response.json();
 }
 

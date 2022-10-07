@@ -6,9 +6,9 @@ const action = "/posts";
 
 export async function readPosts () {
 
-  const createPostURL = `${API_URL}${action}`;
+  const updatePostURL = `${API_URL}${action}`;
 
-  const response = await tokenAuth (createPostURL)
+  const response = await tokenAuth (updatePostURL)
   
   return await response.json();
 }

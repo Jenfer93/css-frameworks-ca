@@ -12,11 +12,12 @@ if (path === "/profile/login/login.html") {
   registerUserForm(); 
 }
 
+
 //post.createPost()
 //post.deletePost()
 //post.updatePost()
-//post.readPosts()
-//post.readPost()
+//post.readPosts().then(console.log)
+//post.readPost(640).then(console.log)
 
 
 

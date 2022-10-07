@@ -8,5 +8,14 @@ export function registerUserForm() {
       const form = event.target; 
       const formData = new FormData(form)
       const profile = Object.fromEntries(formData.entries())
+      if(profile.banner === ""){
+        delete profile.banner
+      }
+      if(profile.avatar === ""){
+        delete profile.avatar
+      }
+      console.log(profile)
+      //Send to API
+      register(profile);
   })
 };

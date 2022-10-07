@@ -4,7 +4,7 @@ import { tokenAuth } from "../tokenFetch.mjs";
 const action = "/posts";
 const method = "delete";
 
-export async function deletePost (id) {
+export async function removePost (id) {
 
   if(!id) {
     throw new Error("Requires ID");
