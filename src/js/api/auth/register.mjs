@@ -8,7 +8,7 @@ export async function register(profile) {
   const registerURL = `${API_URL}${action}`; 
 
 
- const response = await fetch (registerURL, {
+ const response = await fetch(registerURL, {
     headers: {
       "Content-Type": "application/json"
     }, 

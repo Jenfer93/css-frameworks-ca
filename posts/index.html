@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Don't miss out on your friends barks at the feed!">
-  <title>Doggos</title>
-  <link rel="stylesheet" href="dist/css/styles.css">
+  <title>AppNoroff | Posts</title>
+  <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
 <body>
   <header class="p-3 m-auto mb-3 border-bottom">
@@ -14,10 +14,14 @@
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="./profile/user/profile.html" class="nav-link px-2 link-secondary">Profile</a></li>
-          <li><a href="./profile/login/login.html" class="nav-link px-2 link-dark">Login</a></li>
-          <li><a href="./profile/register/signin.html" class="nav-link px-2 link-dark">Signin</a></li>
+          <li><a href="../profile/user/profile.html" class="nav-link px-2 link-secondary">Profile</a></li>
+          <li><a href="../index.html" class="nav-link px-2 link-dark">Logout</a></li>
         </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control m-auto" placeholder="Search..." aria-label="Search">
+        </form>
+
 
         <div class="dropdown text-end">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
@@ -26,7 +30,7 @@
           <ul class="dropdown-menu text-small">
             <li><a class="dropdown-item" href="./profile/user/profile.html">Profile</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="./profile/login/login.html">Sign out</a></li>
+            <li><a class="dropdown-item" href="../index.html">Sign out</a></li>
           </ul>
         </div>
       </div>
@@ -35,19 +39,31 @@
   <main class="m-auto flex-grow-1">
     <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
-          <div class="py-5 text-center mt-3">
-              <h1 class="text-center .fs-3 mb-4">Welcome to AppFriends!</h1>
-              <hr class="mx-5">
-              <div class="row">
-                <div class="col">
-                  <a href="./profile/register/signin.html" class="btn btn-primary ">Register</a>
-                </div>
-                <div class="col">
-                  <a href="./profile/login/login.html" class="btn btn-primary">Login</a>
-                </div>
-              </div>
-          </div>
+        <div class="col-12 col-md-6" id="posts">
+          <form id="Post">
+            <div class="form-group mb-3">
+              <label for="">Title</label>
+              <input class="form-control" type="text" name="title" placeholder="Title" required/>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="">Body</label>
+              <textarea class="form-control" name="title"  required> </textarea>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="">Tags</label>
+              <input class="form-control" type="text" name="tags" placeholder="tags"/>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="">Media</label>
+              <input class="form-control" type="url" name="media"/>
+            </div>
+            
+            <button class="btn btn-primary">Create post</button>
+          </form>
+          <!--List of posts-->
         </div>
       </div>
     </div>
@@ -60,6 +76,6 @@
     </footer>
   </div>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
-  <script type="module" src="/src/js/main.mjs"></script>
+  <script type="module" src="../src/js/main.mjs"></script>
 </body>
 </html>
