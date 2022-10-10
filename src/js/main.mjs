@@ -9,9 +9,9 @@ if (path === "/profile/login/login.html") {
   listeners.loginUserForm(); 
 } else if (path === "/profile/register/signin.html") {
   listeners.registerUserForm(); 
-} else if (path === "/posts/index.html"){
+} else if (path === "/post/create/"){
   listeners.createPostListener();
-} else if(path === "/post/edit/index.html") {
+} else if(path === "/post/edit/") {
   listeners.editPostListener();
 }
 
@@ -21,14 +21,14 @@ const container = document.querySelector("#createPost");
 templates.renderPostTemplates(posts, container);
 }
 
-//testTemplate();
+testTemplate();
 
-
-postMethods.createPost()
+//THE ID: 3676
+//postMethods.createPost()
 //post.deletePost()
 //post.updatePost()
 //post.readPosts().then(console.log)
-//post.readPost(640).then(console.log)
+//postMethods.readPost(3676).then(console.log)
 
 
 
