@@ -28,9 +28,9 @@
             <img src="/css-frameworks-ca-ressurses/profile-picture-pug.jpg" alt="mdo" width="32" height="32" class="rounded-circle">
           </a>
           <ul class="dropdown-menu text-small">
-            <li><a class="dropdown-item" href="./profile/user/profile.html">Profile</a></li>
+            <li><a class="dropdown-item" href="/profile/user/profile.html">Profile</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="../index.html">Sign out</a></li>
+            <li><a class="dropdown-item" href="/index.html">Sign out</a></li>
           </ul>
         </div>
       </div>
@@ -39,30 +39,32 @@
   <main class="m-auto flex-grow-1">
     <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6" id="posts">
-          <form id="Post">
-            <div class="form-group mb-3">
-              <label for="">Title</label>
-              <input class="form-control" type="text" name="title" placeholder="Title" required/>
-            </div>
+        <div class="d-flex flex-column">
+        <h1 class="mb-4 m-md-auto">Welcome to AppNoroff!</h1> 
+        <button href="/post/create/index.html" class="btn btn-primary m-sm-4 d-inline">Post on wall</button>
+        <h2 class="m-sm-auto">Post feed</h2>
+        <div class="d-md-flex justify-content-evenly m-4 	d-none d-sm-block">
+          <button class="btn btn-outline-primary">Most recent</button>
+          <button class="btn btn-outline-primary">Oldest</button>
+          <button class="btn btn-outline-primary">Most popular</button>
+        </div>
+        <div class="m-4 d-block d-sm-none">
+          <div class="dropdown text-left border-dark">
+            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Post options
+            </a>
+            <ul class="dropdown-menu text-small">
+              <li><a class="dropdown-item" href="#">Most recent</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Oldest</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Most popular</a></li>
+            </ul>
+          </div>
 
-            <div class="form-group mb-3">
-              <label for="">Body</label>
-              <textarea class="form-control" name="body"  required> </textarea>
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="">Tags</label>
-              <input class="form-control" type="text" name="tags" placeholder="tags"/>
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="">Media</label>
-              <input class="form-control" type="url" name="media"/>
-            </div>
-            
-            <button class="btn btn-primary">Create post</button>
-          </form>
+        </div>
+        <div>
+          <div class="m-auto d-flex flex-column" id="postsList">
           <!--List of posts-->
         </div>
       </div>
