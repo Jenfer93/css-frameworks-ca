@@ -1,3 +1,6 @@
+
+//Creating the HTML 
+
 export function postTemplate(postData){
   const post = document.createElement("div");
   post.classList = "post card p-4 m-auto mb-3 text-bg-info";
@@ -10,6 +13,8 @@ export function postTemplate(postData){
   const postTitle = document.createElement ("h3");
   postTitle.innerText = postData.title;
   postHeader.append(postTitle);
+
+  //Will insert avatar and user name
 
   // post body 
   const postBodyContainer = document.createElement ("div");
@@ -45,3 +50,4 @@ export function renderPostTemplate(postData, parent) {
 export function renderPostTemplates(postDataList, parent) {
   parent.append(...postDataList.map(postTemplate))
 }
+

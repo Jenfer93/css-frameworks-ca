@@ -16,4 +16,3 @@ export async function createPost (postData) {
   return await response.json();
 }
 
-

@@ -2,13 +2,16 @@ import { API_URL } from "../constants.mjs";
 
 import { tokenAuth } from "../tokenFetch.mjs";
 
+import * as postTemplates from "../../templates/index.mjs";
+
+
 const action = "/posts";
 
 export async function readPosts () {
 
-  const updatePostURL = `${API_URL}${action}`;
+  const getPostURL = `${API_URL}${action}`;
 
-  const response = await tokenAuth (updatePostURL)
+  const response = await tokenAuth (getPostURL)
   
   return await response.json();
 }
@@ -25,3 +28,12 @@ export async function readPost (id) {
   
   return await response.json();
 }
+
+
+//Show all posts on homepage
+export async function showPosts() {
+  const posts = await readPosts();
+  const container = document.querySelector("#postsList");
+  postTemplates.renderPostTemplates(posts, container);
+  }
+  

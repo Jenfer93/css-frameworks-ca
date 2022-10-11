@@ -12,10 +12,11 @@ export function createPostListener() {
         if(post.media === ""){
           delete post.media
         }
-        
+       
         //send it to API
         createPost(post)
 
+        location.href = "/posts/index.html";
     })
   }
 };

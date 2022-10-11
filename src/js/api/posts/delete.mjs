@@ -19,3 +19,4 @@ export async function removePost (id) {
   
   return await response.json();
 }
+
