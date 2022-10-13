@@ -15,8 +15,11 @@ export function createPostListener() {
        
         //send it to API
         createPost(post)
-
+        if (post){
         location.href = "/posts/index.html";
+      } else {
+        console.log("error");
+      }
     })
   }
 };
