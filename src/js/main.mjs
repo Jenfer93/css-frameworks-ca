@@ -20,9 +20,9 @@ if (path === "/profile/login/login.html") {
   postMethods.showPosts();
 } else if (path === "/profile/user/profile.html") {
   profileInfo.getProfileInfo();
-} 
-
-
+} else if (path === "/post/index.html") {
+  postMethods.showPost();
+}
 
 //profileTemplate();
 
