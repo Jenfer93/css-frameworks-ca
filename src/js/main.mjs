@@ -12,18 +12,22 @@ if (path === "/profile/login/login.html") {
   listeners.registerUserForm(); 
 } else if (path === "/post/create/index.html"){
   listeners.createPostListener();
-} else if(path === "/post/edit/") {
+} else if(path === "/post/edit/index.html") {
   listeners.editPostListener();
-}else if(path === "/profile/edit/") {
+  postMethods.showEditingPost();
+}else if(path === "/profile/edit/index.html") {
   listeners.editProfileListener();
+  profileInfo.getProfileInfo();
 } else if (path === "/posts/index.html") {
   postMethods.showPosts();
+  postMethods.getPostsSearch();
 } else if (path === "/profile/user/profile.html") {
   profileInfo.getProfileInfo();
+  postMethods.getUsersPosts();
+  profileInfo.editProfileRedirect();
 } else if (path === "/post/index.html") {
   postMethods.showPost();
-}
-
+} 
 //profileTemplate();
 
 

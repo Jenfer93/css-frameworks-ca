@@ -3,7 +3,6 @@ import { load } from "/src/js/storage/index.mjs";
 
 export async function editProfileListener() {
   const form = document.querySelector("#editProfile");
-  
 
   if(form){
     

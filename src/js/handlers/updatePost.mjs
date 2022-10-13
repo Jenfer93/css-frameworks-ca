@@ -11,12 +11,14 @@ export async function editPostListener() {
     const button = form.querySelector("button");
     button.disabled = true; 
   
-    const post = await readPost(id);
+   /* const post = await readPost(id);
+    const { title, body, tags, media } = post; 
 
-    form.title.value = post.title;
-    form.body.value = post.body;
-    form.tags.value = post.tags;
-    form.media.value = post.media;
+
+    form.title.value = title;
+    form.body.value = body;
+    form.tags.value = tags;
+    form.media.value = media;*/
 
     button.disabled = false; 
 
@@ -32,7 +34,7 @@ export async function editPostListener() {
         
         //send it to API
         updatePost(post)
-
+        location.reload();
     })
   }
 };

@@ -25,7 +25,8 @@ export function getProfileInfo(){
   const userName = document.querySelector(".profile-name");
   const userEmail = document.querySelector(".profile-email");
   const userAvatar = document.querySelector(".profile-picture");
-  const img = document.querySelector(".big-profile-picture");
+  const img = document.querySelectorAll(".big-profile-picture");
+  const editButton = document.querySelector(".editProfileButton");
 
   const userData = load("profile");
   const { name, email, avatar } = userData;
@@ -33,16 +34,23 @@ export function getProfileInfo(){
   userName.innerHTML = name; 
   userEmail.innerText = email; 
 
-  if(!avatar) {
-    img.src = "/css-frameworks-ca-ressurses/profile-picture-pug.jpg";
-    img.alt = "Default profile picture";
-    userAvatar.append(img)
-  } else {
-    img.src = avatar; 
-    img.alt = `${name} profile picture`;
-    userAvatar.append(img)
-  }
-
+    if (!avatar) {
+      img.src = avatar; 
+      img.alt = `${name} profile picture`;
+    } else {
+      img.src = "/css-frameworks-ca-ressurses/profile-picture-pug.jpg";
+      img.alt = "Default profile picture";
+    }
+    
   return getProfileInfo;
 }
 
+/**
+ * Function to redirect a user to their edit profile page 
+ */
+export function editProfileRedirect(){
+  const userData = load("profile");
+  const { name } = userData;
+  const editButton = document.querySelector(".editProfileButton")
+  editButton.addEventListener("click", () => editButton.href =`/profile/edit/index.html?name=${name}`);
+}
