@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The profile page of Pug Puggerson">
+  <meta name="description" content="The profile page">
   <title>AppNoroff | Profile page</title>
   <link rel="stylesheet" href="../../dist/css/styles.css">
 </head>
@@ -24,7 +24,7 @@
 
         <div class="dropdown text-end">
           <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/css-frameworks-ca-ressurses/user_84308.png" alt="mdo" width="32" height="32" class="rounded-circlee profile-picture" >
+            <img src="/css-frameworks-ca-ressurses/user_84308.png" alt="mdo" width="32" height="32" class="rounded-circlee" >
           </a>
           <ul class="dropdown-menu text-small">
             <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -45,6 +45,7 @@
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary profile-email"></strong>
           <h3 class="mb-0 profile-name"></h3>
+          <hr class="mx-1">
           <div class="mb-1 text-muted">Joined October 2th</div>
           <p class="card-text mb-auto">Personal quote: “Handle every situation like a dog. If you can’t eat it or play with it, just pee on it and walk away.”</p>
           <a href="" class="mb-0 opacity-75 editProfileButton">Edit</a>
@@ -52,15 +53,18 @@
       </div>
     </div>
     <!--Button to redirect to post site-->
-    <a href="/post/create/index.html" class="btn btn-primary d-inline m-auto">Make a post</a>
+    <div class="d-flex flex-column mb-4">
+      <a href="/post/create/index.html" class="btn btn-primary d-inline m-auto mb-3">Make a post</a>
+      <hr class="mx-5">
+      </div>
     <!--Earlier posts made through JS-->
-    <div class="m-auto d-flex flex-column" id="usersPosts">
+    <div class="m-auto d-flex flex-column mt-3" id="usersPosts">
       <!--List of posts-->
       </div>
-        <!--Contact list-->
+      <hr class="mx-5">
+        <!--Contact list will make work later-->
         <div class="col-4 list-group w-auto p-3">
           <h3 id="contacts">Contacts</h3>
-        <!--Will make work later-->  
           <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
             <img src="/css-frameworks-ca-ressurses/profile-picture-chowchow.jpg" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0 contact-img">
             <div class="d-flex gap-2 w-100 justify-content-between">

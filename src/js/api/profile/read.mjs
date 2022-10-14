@@ -24,8 +24,7 @@ export function getProfileInfo(){
   
   const userName = document.querySelector(".profile-name");
   const userEmail = document.querySelector(".profile-email");
-  const userAvatar = document.querySelector(".profile-picture");
-  const img = document.querySelectorAll(".big-profile-picture");
+  const img = document.querySelector(".profile-picture");
   const editButton = document.querySelector(".editProfileButton");
 
   const userData = load("profile");
@@ -35,11 +34,11 @@ export function getProfileInfo(){
   userEmail.innerText = email; 
 
     if (!avatar) {
-      img.src = avatar; 
-      img.alt = `${name} profile picture`;
-    } else {
       img.src = "/css-frameworks-ca-ressurses/profile-picture-pug.jpg";
       img.alt = "Default profile picture";
+    } else {
+     img.src = avatar; 
+      img.alt = `${name} profile picture`;
     }
     
   return getProfileInfo;
