@@ -4,6 +4,10 @@ import * as storage from "../../storage/index.mjs";
 const action = "/auth/login"; 
 const method = "post";
 
+/**
+ * Function to log in the user getting a token in return and storing it in loacalStorage
+ * @param {string} profile 
+ */
 export async function login(profile) {
   const loginURL = API_URL + action; 
 

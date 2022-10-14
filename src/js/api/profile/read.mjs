@@ -5,7 +5,11 @@ import { load } from "../../storage/index.mjs"
 
 const action = "/profiles";
 
-
+/**
+ * Function to autorize the user with the tokenFetch
+ * @param {string} name 
+ * @returns 
+ */
 export async function readProfile (name) {
   
   if(!name) {
@@ -19,7 +23,10 @@ export async function readProfile (name) {
   return await response.json();
 }
 
-
+/**
+ * Function to get and make the profile for the user 
+ * @returns profile
+ */
 export async function getProfileInfo(){
   
   const userName = document.querySelector(".profile-name");

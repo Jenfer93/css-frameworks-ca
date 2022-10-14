@@ -85,6 +85,8 @@ export function postTemplate(postData){
   return post; 
 }
 
+
+
 /**
  * The function to show if it's you own post, and gives option to edit or delete
  * @param {string} postData gets the posts

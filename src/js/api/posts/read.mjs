@@ -9,6 +9,10 @@ const action = "/posts";
 const author = "?_author=true";
 const fiveHundred = "&limit=500";
 
+/**
+ * Function that gets all the posts
+ * @returns posts
+ */
 export async function readPosts () {
 
   const getPostURL = `${API_URL}${action}${author}`;
@@ -17,6 +21,12 @@ export async function readPosts () {
   
   return await response.json();
 }
+
+/**
+ * Function that gets one single post based on ID
+ * @param {number} id 
+ * @returns single post
+ */
 
 export async function readPost (id) {
   

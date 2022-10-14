@@ -1,5 +1,9 @@
 import { login } from "../api/auth/login.mjs";
 
+/**
+ * The function for the listener for login page
+ */
+
 export function loginUserForm() {
   const form = document.querySelector("#form-to-login");
 

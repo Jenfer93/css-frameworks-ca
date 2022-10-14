@@ -5,7 +5,11 @@ import { tokenAuth } from "../tokenFetch.mjs";
 const action = "/profiles";
 const method = "put";
 
-
+/**
+ * Function to edit the users profile information (banner and avatar)
+ * @param {string} profileData 
+ * @returns 
+ */
 export async function updateProfile (profileData) {
   const {name} = load ("profile");
 

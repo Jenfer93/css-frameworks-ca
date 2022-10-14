@@ -1,5 +1,9 @@
 import {readPost, updatePost } from "../api/posts/index.mjs";
 
+/**
+ * Function for the listener for the editpost form
+ */
+
 export async function editPostListener() {
   const form = document.querySelector("#editPost");
 
@@ -10,15 +14,7 @@ export async function editPostListener() {
 
     const button = form.querySelector("button");
     button.disabled = true; 
-  
-   /* const post = await readPost(id);
-    const { title, body, tags, media } = post; 
 
-
-    form.title.value = title;
-    form.body.value = body;
-    form.tags.value = tags;
-    form.media.value = media;*/
 
     button.disabled = false; 
 

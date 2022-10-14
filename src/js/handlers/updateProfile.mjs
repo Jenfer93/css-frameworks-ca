@@ -1,6 +1,10 @@
 import { readProfile, updateProfile  } from "../api/profile/index.mjs";
 import { load, save, remove } from "/src/js/storage/index.mjs";
 
+
+/**
+ * Function for the listener for the edit profile form 
+ */
 export async function editProfileListener() {
   const form = document.querySelector("#editProfile");
 

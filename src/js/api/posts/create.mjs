@@ -3,7 +3,11 @@ import { tokenAuth } from "../tokenFetch.mjs";
 
 const action = "/posts";
 const method = "post";
-
+/**
+ * Function to create a new post 
+ * @param {string} postData 
+ * @returns new post
+ */
 export async function createPost (postData) {
   const createPostURL = `${API_URL}${action}`;
 

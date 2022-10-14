@@ -4,6 +4,11 @@ import { tokenAuth } from "../tokenFetch.mjs";
 const action = "/posts";
 const method = "delete";
 
+/**
+ * Function to remove post
+ * @param {number} id 
+ * @returns 
+ */
 export async function removePost (id) {
 
   if(!id) {
