@@ -7,6 +7,7 @@
 import { removePost } from "../api/posts/delete.mjs";
 import { readPosts } from "../api/posts/read.mjs";
 import { load } from "../storage/index.mjs";
+import { getPostsSearch } from "../api/posts/read.mjs";
 
 export function postTemplate(postData){
   const { author, id } = postData;
@@ -38,12 +39,12 @@ export function postTemplate(postData){
     postHeader.append(user);
   } else {
     const userAvatar = document.createElement("img");
-    userAvatar.classList ="ms-3 d-flex justify-item-start rounded-circle";
+    userAvatar.classList ="ms-3 d-flex rounded-circle";
     userAvatar.src = "https://picsum.photos/id/1003/367/267"; 
     userAvatar.alt = `default Avatar`;
     userAvatar.height = "32"; 
     userAvatar.width = "32"; 
-    user.append(postAuthor, userAvatar);
+    user.append(userAvatar, postAuthor);
     postHeader.append(user);
 
   }
@@ -121,12 +122,12 @@ export function postTemplateUserPost (postData){
       postHeader.append(user);
     } else {
       const userAvatar = document.createElement("img");
-      userAvatar.classList ="ms-3 d-flex justify-item-start rounded-circle";
+      userAvatar.classList ="ms-3 d-flex rounded-circle";
       userAvatar.src = "https://picsum.photos/id/1003/367/267"; 
       userAvatar.alt = `default Avatar`;
       userAvatar.height = "32"; 
       userAvatar.width = "32"; 
-      user.append(postAuthor, userAvatar);
+      user.append(userAvatar, postAuthor);
       postHeader.append(user);
   
     }
@@ -226,12 +227,12 @@ export function singlePostTemplate(postData){
     postHeader.append(user);
   } else {
     const userAvatar = document.createElement("img");
-    userAvatar.classList ="ms-3 d-flex justify-item-start rounded-circle";
+    userAvatar.classList ="ms-3 d-flex rounded-circle";
     userAvatar.src = "https://picsum.photos/id/1003/367/267"; 
     userAvatar.alt = `default Avatar`;
     userAvatar.height = "32"; 
     userAvatar.width = "32"; 
-    user.append(postAuthor, userAvatar);
+    user.append(userAvatar, postAuthor);
     postHeader.append(user);
 
   }
@@ -271,7 +272,28 @@ export function singlePostTemplate(postData){
  * @param {string} postDataList gets the posts
  * @param {string} parent place to display posts in html 
  */
-  export function renderSearchedPosts(postDataList, parent){
+
+ export async function renderSearchedPosts(postDataList) {
+  const searchInput = document.querySelector(".searchBar");
+  const posts = await readPosts();
+  searchInput.keyup = function (event) {
+      // console.log(event);
+
+      const searchValue = event.target.value.trim().toLowerCase();
+
+      const filteredPosts = posts.filter(function (posts) {
+          if (posts.title.toLowerCase().startsWith(searchValue) || posts.author.name.toLowerCase().startsWith(searchValue)) {
+              
+            return true;
+          }
+          console.log(posts);
+      });
+
+      getPostsSearch(filteredPosts);
+  };
+}
+
+  /*export function renderSearchedPosts(postDataList, parent){
     const searchInput = document.querySelector(".searchBar");
 
     searchInput.addEventListener ("submit", e =>  {
@@ -282,9 +304,9 @@ export function singlePostTemplate(postData){
             parent.append(postTemplate(i))
           }
         })
-        console.log(searchValue)
+        console.log(getPostsSearch())
       })
-    }
+    }*/
   
 
 /**
