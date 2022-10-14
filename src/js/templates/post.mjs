@@ -276,6 +276,28 @@ export function singlePostTemplate(postData){
  export async function renderSearchedPosts(postDataList) {
   const searchInput = document.querySelector(".searchBar");
   const posts = await readPosts();
+
+  searchInput.addEventListener('keyup', searchPosts)
+
+  function searchPosts(event) {
+      console.log(event);
+
+      const searchValue = event.target.value.trim().toLowerCase();
+
+      const filteredPosts = posts.filter(function (posts) {
+          if (posts.title.toLowerCase().startsWith(searchValue) || posts.author.name.toLowerCase().startsWith(searchValue)) {
+              
+            return true;
+          }
+          console.log(posts);
+      });
+      
+      getPostsSearch(filteredPosts);
+  };
+
+ /*export async function renderSearchedPosts(postDataList) {
+  const searchInput = document.querySelector(".searchBar");
+  const posts = await readPosts();
   searchInput.keyup = function (event) {
       // console.log(event);
 
