@@ -21,7 +21,7 @@ export async function updateProfile (profileData) {
     
   })
 
-  const profile = await response.json();
+  //const profile = await response.json();
   
   return await response.json();
 }

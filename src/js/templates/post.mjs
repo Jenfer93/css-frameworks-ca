@@ -195,6 +195,8 @@ export function postTemplateUserPost (postData){
 export function singlePostTemplate(postData){
   const { author, id } = postData;
   const { name, avatar } = author;
+  const pageHeader = document.querySelector(".singlepostName");
+  pageHeader.innerText = name;
 
   const post = document.createElement("div");
   post.classList = "post card p-4 m-auto mb-3 text-bg-info";
@@ -270,16 +272,15 @@ export function singlePostTemplate(postData){
   export function renderSearchedPosts(postDataList, parent){
     const searchInput = document.querySelector(".searchBar");
 
-
-    searchInput.addEventListener ("input", e =>  {
+    searchInput.addEventListener ("submit", e =>  {
       const searchValue = e.target.value.trim().toLowerCase();
-
+      e.preventDefault();
         postDataList.forEach( i => {
         if(i.title.toLowerCase().startsWith(searchValue) || i.author.name.toLowerCase().startsWith(searchValue)){
             parent.append(postTemplate(i))
           }
         })
-        
+        console.log(searchValue)
       })
     }
   

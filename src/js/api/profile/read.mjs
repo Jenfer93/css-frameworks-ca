@@ -20,12 +20,11 @@ export async function readProfile (name) {
 }
 
 
-export function getProfileInfo(){
+export async function getProfileInfo(){
   
   const userName = document.querySelector(".profile-name");
   const userEmail = document.querySelector(".profile-email");
   const img = document.querySelector(".profile-picture");
-  const editButton = document.querySelector(".editProfileButton");
 
   const userData = load("profile");
   const { name, email, avatar } = userData;

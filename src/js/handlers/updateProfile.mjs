@@ -1,5 +1,5 @@
 import { readProfile, updateProfile  } from "../api/profile/index.mjs";
-import { load } from "/src/js/storage/index.mjs";
+import { load, save, remove } from "/src/js/storage/index.mjs";
 
 export async function editProfileListener() {
   const form = document.querySelector("#editProfile");
@@ -30,7 +30,6 @@ export async function editProfileListener() {
         
         //send it to API
         updateProfile(profile)
-
     })
   }
 };
