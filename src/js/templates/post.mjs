@@ -275,24 +275,20 @@ export function singlePostTemplate(postData){
 
  export async function renderSearchedPosts(postDataList) {
   const searchInput = document.querySelector(".searchBar");
-  const posts = await readPosts();
-
-  searchInput.addEventListener('keyup', searchPosts)
-
-  function searchPosts(event) {
-      console.log(event);
-
-      const searchValue = event.target.value.trim().toLowerCase();
-
-      const filteredPosts = posts.filter(function (posts) {
-          if (posts.title.toLowerCase().startsWith(searchValue) || posts.author.name.toLowerCase().startsWith(searchValue)) {
-              
-            return true;
-          }
-          console.log(posts);
-      });
-      
-      getPostsSearch(filteredPosts);
+  searchInput.addEventListener("keyup", async () => {
+    const posts = await readPosts();
+    console.log(searchInput.value);
+    const filteredPosts = posts.filter(function (posts) {
+      if (
+        posts.title.toLowerCase().startsWith(searchInput.value) ||
+        posts.author.name.toLowerCase().startsWith(searchInput.value)
+      ) {
+        return true;
+      }
+    });
+    console.log(filteredPosts);
+    getPostsSearch(filteredPosts);
+  });
   };
 
  /*export async function renderSearchedPosts(postDataList) {
