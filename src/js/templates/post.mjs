@@ -273,11 +273,11 @@ export function singlePostTemplate(postData){
  * @param {string} parent place to display posts in html 
  */
 
- export async function renderSearchedPosts(postDataList) {
+ export function renderSearchedPosts(postDataList, parent) {
   const searchInput = document.querySelector(".searchBar");
   searchInput.addEventListener("keyup", async () => {
     const posts = await readPosts();
-    console.log(searchInput.value);
+    //console.log(searchInput.value);
     const filteredPosts = posts.filter(function (posts) {
       if (
         posts.title.toLowerCase().startsWith(searchInput.value) ||
@@ -288,6 +288,7 @@ export function singlePostTemplate(postData){
     });
     console.log(filteredPosts);
     getPostsSearch(filteredPosts);
+    parent.append(...postDataList.map(postTemplate));
   });
   };
 

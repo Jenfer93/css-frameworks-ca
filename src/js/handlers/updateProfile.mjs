@@ -11,6 +11,7 @@ export async function editProfileListener() {
   if(form){
     
     const { name, email } = load("profile")
+    const avatar = load("avatar")
     form.name.value = name;
     form.email.value = email;
 
@@ -31,9 +32,10 @@ export async function editProfileListener() {
 
         profile.name = name; 
         profile.email = email; 
-        
+        save("avatar", form.avatar.value);
         //send it to API
         updateProfile(profile)
+        location.reload();
     })
   }
 };

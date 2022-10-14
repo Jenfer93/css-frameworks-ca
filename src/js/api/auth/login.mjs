@@ -19,10 +19,11 @@ export async function login(profile) {
     body: JSON.stringify(profile) 
   })
 
-  const {accessToken, ...user } = await response.json() 
+  const {accessToken, avatar, ...user } = await response.json() 
 
  
   storage.save("token", accessToken)
+  storage.save("avatar", avatar)
   storage.save("profile", user)
 
   if(!accessToken){
