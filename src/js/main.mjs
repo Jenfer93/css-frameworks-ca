@@ -1,7 +1,5 @@
-import * as constants from "./api/constants.mjs";
 import * as listeners from "../js/handlers/index.mjs";
 import * as postMethods from "./api/posts/index.mjs";
-import * as templates from "./templates/index.mjs";
 import * as profileInfo from "./api/profile/index.mjs"
 
 const path = location.pathname;
@@ -21,6 +19,7 @@ if (path === "/profile/login/login.html") {
 } else if (path === "/posts/index.html") {
   postMethods.showPosts();
   postMethods.getPostsSearch();
+  postMethods.getFilteredPosts();
 } else if (path === "/profile/user/profile.html") {
   profileInfo.getProfileInfo();
   postMethods.getUsersPosts();
@@ -28,15 +27,5 @@ if (path === "/profile/login/login.html") {
 } else if (path === "/post/index.html") {
   postMethods.showPost();
 } 
-//profileTemplate();
-
-
-//THE ID: 3676
-//postMethods.createPost()
-//post.deletePost()
-//post.updatePost()
-//post.readPosts().then(console.log)
-//postMethods.readPost(3676).then(console.log)
-
 
 

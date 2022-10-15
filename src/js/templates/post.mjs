@@ -297,6 +297,49 @@ export function renderSearchedPosts(postDataList, parent) {
 };
 
 /**
+ * Filters and Displays posts based on three filtering options: 
+ * todays posts - yesterdays posts - posts with media
+ * @param {string} postDataList
+ * @param {string} parent 
+ */
+
+ export function renderFilteredPost(postDatalist, parent) {
+  const container = document.querySelector("#postsList");
+  const filterTwentyFourHours = document.querySelector("#yesterdayPost");
+  const filterTwoDays = document.querySelector("#twoDaysAgo");
+
+  const day = 1000 * 60 * 60 * 24;
+  const twoDays = day * 2;
+  const currentTime = new Date();
+
+  filterTwentyFourHours.addEventListener("click", () => {
+    const twentyFour = new Date(currentTime - day).toISOString();
+    container.innerHTML = "";
+
+    const filteredDates = postDatalist.filter(post => post.updated <= twentyFour)
+
+    filteredDates.forEach(i => {
+      if (i) {
+        parent.append(postTemplate(i)) 
+      }
+    }) 
+  })
+
+  filterTwoDays.addEventListener("click", () => {
+    const twoDaysAgo = new Date(currentTime - twoDays).toISOString();
+    container.innerHTML = "";
+
+    const filteredDates = postDatalist.filter(post => post.updated <= twoDaysAgo)
+
+    filteredDates.forEach(i => {
+      if (i) {
+        parent.append(postTemplate(i)) 
+      }
+    }) 
+  })
+}
+
+/**
  * Displays the single post 
  * @param {string} postData 
  * @param {string} parent 

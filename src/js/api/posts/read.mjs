@@ -3,6 +3,7 @@ import { API_URL } from "../constants.mjs";
 import { tokenAuth } from "../tokenFetch.mjs";
 
 import * as postTemplates from "../../templates/index.mjs";
+import { renderPostTemplate } from "../../templates/index.mjs";
 
 
 const action = "/posts";
@@ -112,4 +113,14 @@ export async function getPostsSearch() {
   const posts = await readPosts();
   const container = document.querySelector("#postsList");
   postTemplates.renderSearchedPosts(posts, container);
+}
+
+
+/**
+ * The function that gets the filtered posts
+ */
+ export async function getFilteredPosts() {
+  const posts = await morePosts();
+  const container = document.querySelector("#postsList");
+  postTemplates.renderFilteredPost(posts, container)
 }
