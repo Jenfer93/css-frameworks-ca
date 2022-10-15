@@ -28,15 +28,5 @@ if (path === "/profile/login/login.html") {
 } else if (path === "/post/index.html") {
   postMethods.showPost();
 } 
-//profileTemplate();
-
-
-//THE ID: 3676
-//postMethods.createPost()
-//post.deletePost()
-//post.updatePost()
-//post.readPosts().then(console.log)
-//postMethods.readPost(3676).then(console.log)
-
 
 
