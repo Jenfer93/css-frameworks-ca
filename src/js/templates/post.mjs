@@ -273,60 +273,26 @@ export function singlePostTemplate(postData){
  * @param {string} parent place to display posts in html 
  */
 
- export function renderSearchedPosts(postDataList, parent) {
+export function renderSearchedPosts(postDataList, parent) {
   const searchInput = document.querySelector(".searchBar");
-  searchInput.addEventListener("keyup", async () => {
-    const posts = await readPosts();
-    //console.log(searchInput.value);
-    const filteredPosts = posts.filter(function (posts) {
+  
+  
+  searchInput.addEventListener("keyup", async (event) => {
+    const searchValue = event.target.value.toLowerCase();
+    
+    const container = document.querySelector("#postsList");
+    container.innerHTML ="";
+
+    postDataList.forEach (posts => {
       if (
         posts.title.toLowerCase().startsWith(searchInput.value) ||
         posts.author.name.toLowerCase().startsWith(searchInput.value)
       ) {
-        return true;
+        parent.append(postTemplate(posts));
       }
-    });
-    console.log(filteredPosts);
-    getPostsSearch(filteredPosts);
-    parent.append(...postDataList.map(postTemplate));
+    })
   });
-  };
-
- /*export async function renderSearchedPosts(postDataList) {
-  const searchInput = document.querySelector(".searchBar");
-  const posts = await readPosts();
-  searchInput.keyup = function (event) {
-      // console.log(event);
-
-      const searchValue = event.target.value.trim().toLowerCase();
-
-      const filteredPosts = posts.filter(function (posts) {
-          if (posts.title.toLowerCase().startsWith(searchValue) || posts.author.name.toLowerCase().startsWith(searchValue)) {
-              
-            return true;
-          }
-          console.log(posts);
-      });
-
-      getPostsSearch(filteredPosts);
-  };
-}
-
-  /*export function renderSearchedPosts(postDataList, parent){
-    const searchInput = document.querySelector(".searchBar");
-
-    searchInput.addEventListener ("submit", e =>  {
-      const searchValue = e.target.value.trim().toLowerCase();
-      e.preventDefault();
-        postDataList.forEach( i => {
-        if(i.title.toLowerCase().startsWith(searchValue) || i.author.name.toLowerCase().startsWith(searchValue)){
-            parent.append(postTemplate(i))
-          }
-        })
-        console.log(getPostsSearch())
-      })
-    }*/
-  
+};
 
 /**
  * Displays the single post 
