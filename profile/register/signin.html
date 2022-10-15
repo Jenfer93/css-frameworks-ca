@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Register to the best social media app for Noroff students!">
+  <title>AppNoroff | Register user </title>
+  <link rel="stylesheet" href="/dist/css/styles.css">
+</head>
+<body>
+  <header class="p-3 m-auto mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+
+          <li><a href="/profile/login/login.html" class="nav-link px-2 link-dark">Login</a></li>
+          <li><a href="/profile/register/signin.html" class="nav-link px-2 link-dark">Register</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="m-auto flex-grow-1">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        
+        <div class="col-12 col-md-6">
+          <h1 class="mb-3">Register user</h1>
+          <form id="form-to-register">
+            <div class="form-group mb-3">
+              <label for="name">Username</label>
+              <input class="form-control" type="text" name="name" placeholder="MyUserName" required pattern="^[\w]+$" title="Name format must be without space (MyUserName) or with an underscore (My_user_name1)"/>
+            </div>
+            <div class="form-group mb-3">
+              <label for="email">Email address</label>
+              <input class="form-control" type="email" name="email" placeholder="myuser@stud.noroff.no" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Email must be a @noroff.no or @stud.noroff.no"/>
+            </div>
+            <div class="form-group mb-3">
+              <label for="password">Password</label>
+              <input class="form-control" type="password" name="password" required minlength="8" title="Minimum length 8 characters"/>
+            </div>
+            <div class="form-group mb-3">
+              <label for="banner">Banner</label>
+              <input class="form-control" type="url" name="banner"/>
+            </div>
+            <div class="form-group mb-3">
+              <label for="avatar">Avatar</label>
+              <input class="form-control" type="url" name="avatar"/>
+            </div>
+            <button class="btn border-dark">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="container">
+    <footer class="d-flex py-3 my-4 border-top">
+      <div>
+        <span class="mb-3 mb-md-0 text-muted">© 2022 AppNoroff, Inc</span>
+      </div>
+    </footer>
+  </div>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
+  <script type="module" src="/src/js/main.mjs"></script>
+</body>
+</html>

@@ -4,52 +4,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Login to the best social media app for dogs; Doggos!">
-  <title>Doggos | Login </title>
+  <meta name="description" content="Join the best social media app for Noroff students, register or login here">
+  <title>AppNoroff</title>
   <link rel="stylesheet" href="dist/css/styles.css">
 </head>
 <body>
-  <!--https://getbootstrap.com/docs/5.2/examples/headers/-->
   <header class="p-3 m-auto mb-3 border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         
         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="/profile.html" class="nav-link px-2 link-secondary">Profile</a></li>
-          <li><a href="#" class="nav-link px-2 link-dark">Contacts</a></li>
+          <li><a href="./profile/login/login.html" class="nav-link px-2 link-dark">Login</a></li>
+          <li><a href="./profile/register/signin.html" class="nav-link px-2 link-dark">Signin</a></li>
         </ul>
-
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" class="form-control m-auto" placeholder="Search..." aria-label="Search">
-        </form>
-
-        <div class="text-end">
-          <button type="button" class="btn btn-outline-dark me-2" id="signinButton">Login</button>
-        </div>
       </div>
     </div>
   </header>
-
-  <main class="m-auto">
-
-        <div class="m-auto">
-            <h2 class="fw-bold">Login to view content</h2>
-          
-          <div class="p-5 pt-0 form-floating mb-3">
-
-            <form id="login-form" action="/homepage.html" type="post">
-              <label for="username" class="mt-2">Email address </br>*<small>Obs only @noroff.no or @stud.noroff.no email</small></label>
-              <input type="email" name="email" id="login-email-field" class="login-form-field form-control" placeholder="name@noroff.com" required>
-              <label for="password" class="mt-2">Password </br>*<small>Minimum 5 characters</small></label>
-              <input type="password" name="password" id="login-password-field" class="login-form-field form-control" placeholder="Password" required minlength="5">
-              <input type="submit" value="Login" id="login-form-submit" class="w-100 mb-2 mt-2 btn btn-lg rounded-3 btn-primary">
-            </form>
-            <p>Don't have an account? <a href="signin.html">Sign in here!</a></p>
+  <main class="m-auto flex-grow-1">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <div class="py-5 text-center mt-3">
+              <h1 class="text-center .fs-3 mb-4">Welcome to AppNoroff!</h1>
+              <hr class="mx-5">
+              <div class="row">
+                <div class="col">
+                  <a href="/profile/register/signin.html" class="btn btn-primary ">Register</a>
+                </div>
+                <div class="col">
+                  <a href="/profile/login/login.html" class="btn btn-primary">Login</a>
+                </div>
+              </div>
           </div>
         </div>
-      
-    
+      </div>
+    </div>
   </main>
+  <div class="container">
+    <footer class="d-flex py-3 my-4 border-top">
+      <div>
+        <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+      </div>
+    </footer>
+  </div>
   <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> 
   <script type="module" src="/src/js/main.mjs"></script>
   <script type="module" src="/src/js/login.mjs"></script>
