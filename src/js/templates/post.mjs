@@ -199,8 +199,10 @@ export function singlePostTemplate(postData){
   const { author, id } = postData;
   const { name, avatar } = author;
   const pageHeader = document.querySelector(".singlepostName");
-  pageHeader.innerText = name;
-
+  const path = location.pathname
+    if(path === '/post/index.html'){
+    pageHeader.innerText = name;
+    }
   const post = document.createElement("div");
   post.classList = "post card p-4 m-auto mb-3 text-bg-info";
   

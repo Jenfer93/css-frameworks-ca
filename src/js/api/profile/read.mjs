@@ -36,7 +36,6 @@ export async function getProfileInfo(){
   const userData = load("profile");
   const { name, email } = userData;
   const avatar = load("avatar");
-  console.log(avatar)
 
   userName.innerHTML = name; 
   userEmail.innerText = email; 
