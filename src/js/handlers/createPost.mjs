@@ -13,6 +13,8 @@ export function createPostListener() {
         const form = event.target; 
         const formData = new FormData(form)
         const post = Object.fromEntries(formData.entries())
+        
+        //Delete the media if there is a empty string 
         if(post.media === ""){
           delete post.media
         }

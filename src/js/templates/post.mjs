@@ -297,8 +297,8 @@ export function renderSearchedPosts(postDataList, parent) {
 };
 
 /**
- * Filters and Displays posts based on three filtering options: 
- * todays posts - yesterdays posts - posts with media
+ * Filters and Displays posts based on two filtering options: 
+ * yesterdays posts and the posts from two days ago
  * @param {string} postDataList
  * @param {string} parent 
  */

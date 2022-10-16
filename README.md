@@ -45,15 +45,3 @@ Required functionality must be implemented in original, pure JavaScript.
 A CSS Framework may be used to build the application UI.
 A .gitignore file must be provided including node_modules. This folder must be untracked.
 Content posted on the API is public and associated with your identity. Be appropriate and respectful.##
-
-<!--
-Innlogging:
-email
-:
-"JenFer13301@stud.noroff.no"
-name
-:
-"Jenny_Feragen"
-password
-:
-"mittpassord"
